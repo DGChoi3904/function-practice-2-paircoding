@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    기본 틀을 정의하기 위해 제일 밑단계부터 구현하여 위로 한번씩 구현한 모습. 연구중의 모습입니다.
+    구현중 착오로 인해 div#root > div*3이 아닌 div#root>div>div*3 의 형태로 코드를 짰습니다. 나중에 피드백이 되어 이 후 코드에선 수정되었습니다.
+  -->
+  <div id="root">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <script>
+    function rootConnector() {
+      let rootTree = {
+        parentNode : document.getElementById('root'),
+        childNode : document.createElement('div'),
+        grandChildNode : document.createElement('div')
+      };
+    };
+    function setRoot() {
+      let rootForm = {
+      id : document.getElementById('root'),
+      width : "100vw",
+      height : "100vh",
+      backgroundColor : "cadetblue",
+      display : "flex",
+      justifyContent : "center",
+      alignItems : "center",
+      position : "relative" 
+      }
+    }
+    let rootForm = setRoot();
+    
+
+    
+    function createDivForm() {
+      let divForm = {
+        elementType : 'div',
+        width : '500px',
+        height : '500px',
+        borderRadius : '250px',
+        opacity : '0.8',
+        position : 'absolute'
+      };
+    }
+    let defaultDiv = createDiv();
+
+    function createDivForm(top, left, filter){
+      let divForm = {
+        elementType : 'div',
+        width : '500px',
+        height : '500px',
+        borderRadius : '250px',
+        opacity : '0.8',
+        position : 'absolute',
+        top : top,
+        left : left,
+        filter : filter
+      };
+    }
+    let divNew = createDivForm("20px", "50px", "blur(10px)");
+   
+    let divForm = {
+      elementId : document.createElement("div"),
+      elementType : 'div',
+      width : '500px',
+      height : '500px',
+      borderRadius : '250px',
+      opacity : '0.8',
+      position : 'absolute'
+    };
+    let flexForm = {
+      display : "flex",
+      justifyContent : "center",
+      alignItems : "center"
+    };
+    let positionForm = {
+      position : ["relative", "absolute"],
+      top : ["-100px", "50px", "300px"],
+      left : ["-50px", "50px", "300px"]
+    };
+    
+    let bgForm = {
+      backgroundColor : ["cadetblue", "salmon", "conflowerblue", "coral"],
+      filter : ["blur(10px)", "blur(20px)"]
+    }
+    
+    let rootForm2 = {
+        marginTop : ["-100px", "50px", "300px"],
+        marginLeft : ["-50px","50px","300px"],
+        backgroundColor : ["salmon", "cornflowerblue", "coral"],
+        filter : ["blur(10px)","blur(20px)"]
+    };
+
+    let root = rootForm.id;
+    let div = defaultDiv.id;
+
+  </script>
+</body>
+</html>

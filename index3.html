@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <script>
+      let rootForm = {
+      elementId : document.getElementById('root'),
+      elementType : "div",
+      width : "100vw",
+      height : "100vh",
+      backgroundColor : "cadetblue",
+      display : "flex",
+      justifyContent : "center",
+      alignItems : "center",
+      position : "relative"
+      };
+    
+    let rootForm = {
+      elementId : document.getElementById('root'),
+      elementType : "div",
+      width : "100vw",
+      height : "100vh",
+      backgroundColor : "cadetblue",
+      display : "flex",
+      justifyContent : "center",
+      alignItems : "center",
+      position : "relative"
+    };
+
+    let divForm = {
+      elementId : document.createElement("div"),
+      elementType : 'div',
+      width : '500px',
+      height : '500px',
+      borderRadius : '250px',
+      opacity : '0.8',
+      position : 'absolute'
+    };
+    let flexForm = {
+      display : "flex",
+      justifyContent : "center",
+      alignItems : "center"
+    };
+    let positionForm = {
+      position : ["relative", "absolute"],
+      top : ["-100px", "50px", "300px"],
+      left : ["-50px", "50px", "300px"]
+    };
+    
+    let bgForm = {
+      backgroundColor : ["cadetblue", "salmon", "conflowerblue", "coral"],
+      filter : ["blur(10px)", "blur(20px)"]
+    }
+    
+    let rootForm2 = {
+        marginTop : ["-100px", "50px", "300px"],
+        marginLeft : ["-50px","50px","300px"],
+        backgroundColor : ["salmon", "cornflowerblue", "coral"],
+        filter : ["blur(10px)","blur(20px)"]
+    };
+
+    
+    let root = document.getElementById('root');
+    root.style.width = rootForm.width;
+    root.style.height = rootForm.height;
+    root.style.backgroundColor = rootForm.backgroundColor;
+    root.style.display = rootForm.display;
+    root.style.justifyContent = rootForm.justifyContent;
+    root.style.alignItems = rootForm.alignItems;
+    root.style.position = rootForm.position;
+    
+    let div = document.createElement("div");
+    //기본 요소들
+    div.style.width = divForm.width;
+    div.style.height = divForm.height;
+    div.style.borderRadius = divForm.borderRadius;
+    div.style.opacity = divForm.opacity;
+    div.style.position = divForm.position;
+    //따로 적용하는 요소들
+    div1.style.marginTop = divForm2.marginTop;
+    div1.style.marginLeft = divForm2.marginLeft;
+    div1.style.backgroundColor = divForm2.backgroundColor;
+    div1.style.filter = divForm2.filter;
+    
+    let div1 = document.createElement("div");
+    div1.style.marginTop = divForm2.marginTop;
+    div1.style.marginLeft = divForm2.marginLeft;
+    div1.style.backgroundColor = divForm2.backgroundColor;
+    div1.style.filter = divForm2.filter;
+
+    let div2 = document.createElement("div"); 
+    div2.style.marginTop = divForm2.marginTop;
+    div2.style.marginLeft = divForm2.marginLeft;
+    div2.style.backgroundColor = divForm2.backgroundColor;
+    div2.style.filter = divForm2.filter;
+    
+
+    
+    let div3 = document.createElement("div");
+    div3.style.marginTop = divForm2.marginTop;
+    div3.style.marginLeft = divForm2.marginLeft;
+    div3.style.backgroundColor = divForm2.backgroundColor;
+    div3.style.filter = divForm2.filter;
+    
+    root.appendChild(div);
+    div.appendChild(div1);
+    div.appendChild(div2);
+    div.appendChild(div3);
+    
+
+  </script>
+</body>
+</html>
